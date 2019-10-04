@@ -125,7 +125,7 @@ Then install [Docker](https://docs.docker.com/install/#supported-platforms) and 
 
 # Running your app
 Commit and clone your repo in your server. (The following instruction applies if you're running from your own computer)
-locale to server: `scp -r /Users/"YOR_YOUR_NAME"/"PATH_TO_YOUR_PROJECT/website/* root@IP_YOUR_SERVER:~/website/`
+locale to server (if use MacOS): `scp -r /Users/YOR_YOUR_NAME/PATH_TO_YOUR_PROJECT/website/* root@IP_YOUR_SERVER:~/website/`
 * cd to the website folder
 * Run `docker-compose up --build -d` and that's it!. The first time you run it, all the necessary files will be pulled from the docker repositories so it might take some time depending on your connection.
 
