@@ -1,7 +1,7 @@
 # nuxt-docker-digitalocean
 
 1. First create a droplet on  [digitalocean](digitalocean.com)
-![digitalocean](digitalocean.png)
+![digitalocean](readme-img/digitalocean.png)
 Then install [Docker](https://docs.docker.com/install/#supported-platforms) and [Docker-Compose](https://docs.docker.com/compose/install/#install-compose) in the created droplet and your local machine (follow the instructions in the documentation for your operating system)
 
     Install docker in the server(droplet):
@@ -22,7 +22,7 @@ Then install [Docker](https://docs.docker.com/install/#supported-platforms) and 
 
     To verify the installed Docker version number, enter:
     >`docker --version`
-    ![version](docker-version.png)
+    ![version](readme-img/docker-version.png)
 
     Install Docker-Compose
     Run this command to download the current stable release of Docker Compose:
@@ -34,7 +34,7 @@ Then install [Docker](https://docs.docker.com/install/#supported-platforms) and 
 
     Test the installation.
     >`docker-compose --version`
-    ![compose](compose.png)
+    ![compose](readme-img/compose.png)
 
    Create directory on your server for your project 
    >`cd ~ `
@@ -46,7 +46,7 @@ Then install [Docker](https://docs.docker.com/install/#supported-platforms) and 
     In our app folder, create a file and name it `Dockerfile`
     >This a text document that contains all the commands a user could call on the command line to assemble an image. And it has no extension.
 
-      ![app-folder](app.png)
+      ![app-folder](readme-img/app.png)
       >`Dockerfile`
 
       >FROM node:10.7\
@@ -68,9 +68,9 @@ Then install [Docker](https://docs.docker.com/install/#supported-platforms) and 
     
     ## Docker Compose
     Our compose file is located in our root website folder:
-    ![dockercompose](dockercompose.png)
+    ![dockercompose](readme-img/dockercompose.png)
     Let's take a look to our docker-compose.yml
-    ![dockercompose](docker-composeyml.png)
+    ![dockercompose](readme-img/docker-composeyml.png)
     >version: "3"\
       \
       services:\
@@ -110,7 +110,7 @@ Then install [Docker](https://docs.docker.com/install/#supported-platforms) and 
   We are almost ready. Our last step is to configure our nginx. By default, our app will be running on port 3000, we will use nginx as a reverse proxy.
   
   Create `nginx` folder and create the file: `default.conf` with the following contents:
-  ![default.conf](default-conf.png)
+  ![default.conf](readme-img/default-conf.png)
 
       server {
         listen 80;
@@ -130,7 +130,7 @@ locale to server (if use MacOS): `scp -r /Users/YOR_YOUR_NAME/PATH_TO_YOUR_PROJE
 * Run `docker-compose up --build -d` and that's it!. The first time you run it, all the necessary files will be pulled from the docker repositories so it might take some time depending on your connection.
 
 If you want to check everything went alright, run `docker ps` and you should see something like this:
-![dockerps](dockerps.png)
+![dockerps](readme-img/dockerps.png)
 
 to stop the docker process run `docker-compose stop` 
 >Stops running containers without removing them. They can be started again with `docker-compose start`
