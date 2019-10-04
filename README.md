@@ -137,3 +137,4 @@ to stop the docker process run `docker-compose stop`
 or
 >`docker-compose down` Stops containers and removes containers, networks, volumes, and images created by up.
 
+## More thanks! [Super Diana](https://github.com/alphacentauri82')
